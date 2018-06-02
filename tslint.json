@@ -4,6 +4,11 @@
     "quotemark": {
       "options": ["single", "jsx-double"],
       "severity": "error"
+    },
+    "no-implicit-dependencies": false,
+    "no-submodule-imports": {
+      "options": ["src"],
+      "severity": "error"
     }
   }
 }

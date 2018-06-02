@@ -5,6 +5,8 @@ const htmlPlugin = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'src/index.html'),
 });
 
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+
 module.exports = {
   entry: './src/index.tsx',
   output: {
@@ -18,6 +20,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
+    plugins: [
+      new TsconfigPathsPlugin(),
+    ],
   },
   module: {
     rules: [
