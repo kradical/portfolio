@@ -10,15 +10,19 @@ To get this project running:
 - navigate to `localhost:9000` in your favourite browser
 
 ### Ideas
+- [ ] Add context to css module hashes
 - [ ] Header
   - [x] profile link
   - [ ] single actionable
   - [ ] theme dropdown
     - [ ] save in cookies
   - [ ] search
-- [x] banner image
-    - [ ] cool scroll interaction
+- [] Banner
+  - [ ] cool scroll interaction
+  - [x] image
 - [ ] Profile
+  - [ ] Card
+  - [ ] Add Icons
 - [ ] Projects
   - [ ] Multiple display formats
   - [ ] Stars threejs demo

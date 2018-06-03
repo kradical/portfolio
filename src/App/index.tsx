@@ -13,11 +13,7 @@ export const App = () =>
     <React.Fragment>
       <Header />
       <Banner />
-      <Profile
-        author="Konrad Schultz"
-        compiler="typescript"
-        framework="React"
-      />
+      <Profile />
       <Projects />
       <Footer />
      </React.Fragment>

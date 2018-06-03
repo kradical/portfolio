@@ -1,19 +1,14 @@
 import * as React from 'react';
 
+import { ProfileCard } from './Card';
+
 import * as css from './index.css';
 
-interface IProps {
-  compiler: string;
-  framework: string;
-  author: string;
-}
+import {
+  me,
+} from './data';
 
-export const Profile = (props: IProps) =>
+export const Profile = () =>
   (
-    <React.Fragment>
-      <h1 className={css.foo}>This is the profile.</h1>
-      <p>This site is made with {props.compiler} and {props.framework}.</p>
-      <p>Work in progress</p>
-      <small className={css.barBaz}>Brought to you by {props.author}.</small>
-    </React.Fragment>
+    <ProfileCard {...me} />
   );
