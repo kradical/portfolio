@@ -16,8 +16,8 @@ To get this project running:
   - [ ] theme dropdown
     - [ ] save in cookies
   - [ ] search
-- [ ] banner image
-    - [ ] full screen?
+- [x] banner image
+    - [ ] cool scroll interaction
 - [ ] Profile
 - [ ] Projects
   - [ ] Multiple display formats

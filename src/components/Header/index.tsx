@@ -47,7 +47,12 @@ export class Header extends React.Component<{}, IState> {
   }
 
   private handleScroll = () => {
-    const bannerHeight = 250;
+    const bannerHeight = parseInt(
+      window
+        .getComputedStyle(document.querySelector('html'))
+        .getPropertyValue('--banner-height'),
+      10,
+    );
 
     const shouldBeFixed = window.scrollY <= bannerHeight;
 
