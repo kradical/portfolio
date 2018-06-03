@@ -51,8 +51,14 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /\.tsx?$/,
         enforce: 'pre',
+        loader: 'tslint-loader',
+
+      },
+      {
         test: /\.js$/,
+        enforce: 'pre',
         loader: 'source-map-loader',
         exclude: /node_modules/,
       },

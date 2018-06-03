@@ -1,0 +1,4 @@
+.banner {
+  height: var(--banner-height);
+  background-color: var(--color-shade-darkest);
+}

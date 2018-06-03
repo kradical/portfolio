@@ -1,8 +1,8 @@
 import * as React from 'react';
 
+import * as css from './index.css';
+
 export const Banner = () =>
   (
-    <React.Fragment>
-      <h1>This is the space demo.</h1>
-    </React.Fragment>
+    <div className={css.banner} />
   );
