@@ -4,7 +4,7 @@ import { Footer } from 'src/components/Footer';
 import { Header } from 'src/components/Header';
 import { Profile } from 'src/components/Profile';
 import { Projects } from 'src/components/Projects';
-import { SpaceDemo } from 'src/components/SpaceDemo';
+import { Banner } from 'src/components/Banner';
 
 import 'src/styles/styles.css';
 
@@ -12,7 +12,7 @@ export const App = () =>
   (
     <React.Fragment>
       <Header />
-      <SpaceDemo />
+      <Banner />
       <Profile
         author="Konrad Schultz"
         compiler="typescript"

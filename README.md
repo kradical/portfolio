@@ -1,7 +1,7 @@
 # portfolio
 Personal portfolio site
 
-View this site live at http://konradschultz-portfolio.s3-website.ca-central-1.amazonaws.com/.
+View this site live at http://konradschultz-portfolio.s3-website.ca-central-1.amazonaws.com/
 
 To get this project running:
 - install `nodejs` `v10.3.1` and `npm` `v6.1.0`
@@ -9,19 +9,26 @@ To get this project running:
 - `$ npm start`
 - navigate to `localhost:9000` in your favourite browser
 
-TODO:
-- navbar
-    + single actionable
-- something fun
-- personal overview section
-- links to projects
-    + Blog
-    + Liefbase
-    + RoomRaider
-    + riipen.io
-- footer
-    - link to this code
-    - version / build # / branch
-    - build date
-    - copyright
-    - contact me link
+### Ideas
+- [ ] Header
+  - [x] profile link
+  - [ ] single actionable
+  - [ ] theme dropdown
+    - [ ] save in cookies
+  - [ ] search
+- [ ] banner image
+    - [ ] full screen?
+- [ ] Profile
+- [ ] Projects
+  - [ ] Multiple display formats
+  - [ ] Stars threejs demo
+  - [ ] Blog
+  - [ ] Liefbase
+  - [ ] RoomRaider
+  - [ ] riipen.io
+- [ ] Footer
+  - [ ] link to this code
+  - [ ] version / build # / branch
+  - [ ] build date
+  - [ ] copyright
+  - [ ] contact me link
