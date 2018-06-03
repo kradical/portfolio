@@ -2,18 +2,18 @@ import * as React from 'react';
 
 import * as css from './index.css';
 
-interface IHelloProps {
+interface IProps {
   compiler: string;
   framework: string;
   author: string;
 }
 
-export const Hello = (props: IHelloProps) =>
+export const Profile = (props: IProps) =>
   (
     <React.Fragment>
-      <h1 className={css.foo}>Hello!</h1>
+      <h1 className={css.foo}>This is the profile.</h1>
       <p>This site is made with {props.compiler} and {props.framework}.</p>
       <p>Work in progress</p>
-      <small className={css.barBaz}>Brought to you by {props.author}</small>
+      <small className={css.barBaz}>Brought to you by {props.author}.</small>
     </React.Fragment>
   );
