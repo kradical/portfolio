@@ -23,9 +23,15 @@
   --color-shade-lighter: #ccc;
   --color-shade-lightest: #fff;
 
-  --font-size-small: 14;
-  --font-size-medium: 16;
-  --font-size-large: 18;
+  --color-link: #00b7ff;
+
+  --font-size-small: 14px;
+  --font-size-medium: 16px;
+  --font-size-large: 18px;
+
+  --border-radius-small: 5px;
+  --border-radius-medium: 10px;
+  --border-radius-large: 15px;
 
   --header-height: 56px;
 

@@ -1,5 +1,27 @@
 .header {
-  background-color: var(--color-shade-darkest);
-  color: var(--color-shade-medium);
+  background-color: var(--color-shade-darker);
+  color: var(--color-shade-lighter);
   height: var(--header-height);
+  display: flex;
+  align-items: center;
+}
+
+.header > * {
+  margin: 0 10px;
+}
+
+.header > :last-child {
+  margin-left: auto;
+}
+
+.profileLink {
+  display: flex;
+  align-items: center;
+}
+
+.profilePicture {
+  height: 30px;
+  width: 30px;
+  border-radius: var(--border-radius-small);
+  margin-right: 10px;
 }
