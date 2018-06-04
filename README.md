@@ -12,8 +12,9 @@ To get this project running:
 ### Ideas
 - [ ] Add context to css module hashes
 - [ ] Header
-  - [x] profile link
-  - [ ] single actionable
+  - [ ] profile link
+  - [ ] Blog link
+  - [ ] single actionable ("featured project")
   - [ ] theme dropdown
     - [ ] save in cookies
   - [ ] search
@@ -24,12 +25,18 @@ To get this project running:
   - [x] Card
   - [ ] Add Icons
 - [ ] Projects
+  - [ ] Add at least 1 filter
+  - [ ] Make Searchable
   - [ ] Multiple display formats
-  - [ ] Stars threejs demo
-  - [ ] Blog
-  - [ ] Liefbase
-  - [ ] RoomRaider
-  - [ ] riipen.io
+    - [ ] Large Card
+    - [ ] Table/List View
+    - [ ] Compact Card
+  - [ ] Samples
+    - [ ] Stars threejs demo
+    - [ ] Blog
+    - [ ] Liefbase
+    - [ ] RoomRaider
+    - [ ] riipen.io
 - [ ] Footer
   - [ ] link to this code
   - [ ] version / build # / branch
