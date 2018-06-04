@@ -2,7 +2,10 @@ import * as profilePic from 'assets/images/profilePicture.jpg';
 
 export interface IPersonProfile {
   avatarUrl: string;
-  company: string;
+  company: {
+    name: string;
+    url: string;
+  };
   biography: string;
   location: string;
   name: string;
@@ -16,7 +19,10 @@ export interface IPersonProfile {
 export const me: IPersonProfile = {
   avatarUrl: profilePic,
   biography: 'I like to code and things.',
-  company: 'Riipen',
+  company: {
+    name: 'Riipen',
+    url: 'https://riipen.io/landing',
+  },
   location: 'Salt Spring Island, BC, Canada',
   name: 'Konrad Schultz',
   socialUrls: {

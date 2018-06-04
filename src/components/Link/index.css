@@ -3,5 +3,5 @@
   text-decoration: none;
 }
 .link:hover {
-  background-color: var(--color-primary-lightest);
+  background-color: var(--color-link-hover);
 }

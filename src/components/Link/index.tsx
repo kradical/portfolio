@@ -4,10 +4,10 @@ import * as css from 'src/components/Link/index.css';
 
 interface IProps {
   href: string;
-  classes: [string];
+  classes?: string[];
 }
 
-export const Link = (props: IProps) => {
+const Link: React.StatelessComponent<IProps> = (props) => {
   const {
     classes,
     ...rest,
@@ -21,4 +21,12 @@ export const Link = (props: IProps) => {
     .join(' ');
 
   return <a className={className} {...rest} />;
+};
+
+Link.defaultProps = {
+  classes: [],
+};
+
+export {
+  Link,
 };

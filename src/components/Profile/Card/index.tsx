@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { Link } from 'src/components/Link';
 import { IPersonProfile } from 'src/components/Profile/data';
 
 import { Avatar } from './Avatar';
@@ -8,17 +9,35 @@ import * as css from './index.css';
 export const ProfileCard = (props: IPersonProfile) =>
   (
     <div className={css.card}>
-      <div className={css.headline}>
-        <Avatar url={props.avatarUrl} />
+      <div className={css.infoRow}>
+        <div className={css.avatar}>
+          <Avatar url={props.avatarUrl} />
+        </div>
         <div>
-          <p>{props.name}</p>
-          <p>{props.title} at {props.company}</p>
+          {props.name}
+          <br />
+          {props.title}
+          {' '}at{' '}
+          <Link href={props.company.url}>
+            {props.company.name}
+          </Link>
           <p>{props.location}</p>
         </div>
       </div>
-      <div>
-        <p>{props.socialUrls.github}</p>
-        <p>{props.socialUrls.linkedin}</p>
+      <div className={css.biographyRow}>
+        {props.biography}
       </div>
+      <div className={css.socialRow}>
+        <Link href={props.socialUrls.github}>
+          Github
+        </Link>
+        {' '}
+        •
+        {' '}
+        <Link href={props.socialUrls.linkedin}>
+          LinkedIn
+        </Link>
+      </div>
+      <div className={css.decorativeCircle} />
     </div>
   );

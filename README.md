@@ -17,11 +17,11 @@ To get this project running:
   - [ ] theme dropdown
     - [ ] save in cookies
   - [ ] search
-- [] Banner
+- [ ] Banner
   - [ ] cool scroll interaction
   - [x] image
 - [ ] Profile
-  - [ ] Card
+  - [x] Card
   - [ ] Add Icons
 - [ ] Projects
   - [ ] Multiple display formats
