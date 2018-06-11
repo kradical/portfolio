@@ -1,0 +1,12 @@
+.action {
+  background-color: var(--color-secondary);
+  padding: 5px;
+}
+
+.actionLink {
+  color: var(--color-shade-lightest);
+}
+
+.actionLink:hover {
+  background-color: transparent;
+}

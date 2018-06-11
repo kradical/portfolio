@@ -1,6 +1,8 @@
 import * as React from 'react';
 
 import * as profilePic from 'assets/images/profilePicture.jpg';
+
+import { ActionHeader } from 'src/components/ActionHeader';
 import { Link } from 'src/components/Link';
 
 import * as css from './index.css';
@@ -36,12 +38,19 @@ export class Header extends React.Component<{}, IState> {
       <React.Fragment>
         <div className={css.placeholder} />
         <div className={className}>
-          <Link classes={[css.profileLink]} href="#">
+          <Link classes={[css.profileLink]} href="#profile">
             <img src={profilePic} className={css.profilePicture} />
             Konrad Schultz
            </Link>
+          <Link classes={[css.link]} href="#todo-blog">
+            Blog
+          </Link>
           <div>Search...</div>
         </div>
+        <ActionHeader
+          message="Featured Project: Personal Blog"
+          link="#todo-blog"
+        />
        </React.Fragment>
     );
   }

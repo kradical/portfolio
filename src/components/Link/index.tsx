@@ -10,7 +10,7 @@ interface IProps {
 const Link: React.StatelessComponent<IProps> = (props) => {
   const {
     classes,
-    ...rest,
+    ...rest
   } = props;
 
   const className = [

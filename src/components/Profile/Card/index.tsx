@@ -8,7 +8,7 @@ import * as css from './index.css';
 
 export const ProfileCard = (props: IPersonProfile) =>
   (
-    <div className={css.card}>
+    <div id="profile" className={css.card}>
       <div className={css.infoRow}>
         <div className={css.avatar}>
           <Avatar url={props.avatarUrl} />

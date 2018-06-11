@@ -12,6 +12,9 @@
         "assets"
       ],
       "severity": "error"
+    },
+    "trailing-comma": {
+      "esSpecCompliant": true
     }
   }
 }

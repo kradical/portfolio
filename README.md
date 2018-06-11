@@ -12,17 +12,14 @@ To get this project running:
 ### Ideas
 - [ ] Add context to css module hashes
 - [ ] Header
-  - [ ] profile link
-  - [ ] Blog link
-  - [ ] single actionable ("featured project")
+  - [ ] Action Header
+    - [ ] Add Icon
   - [ ] theme dropdown
     - [ ] save in cookies
   - [ ] search
 - [ ] Banner
   - [ ] cool scroll interaction
-  - [x] image
 - [ ] Profile
-  - [x] Card
   - [ ] Add Icons
 - [ ] Projects
   - [ ] Add at least 1 filter

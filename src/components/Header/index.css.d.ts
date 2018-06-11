@@ -4,5 +4,6 @@ export const header: string;
 export const fixed: string;
 export const stuck: string;
 export const placeholder: string;
+export const link: string;
 export const profileLink: string;
 export const profilePicture: string;
