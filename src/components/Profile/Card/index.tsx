@@ -15,13 +15,15 @@ export const ProfileCard = (props: PersonProfile) => (
       <div>
         {props.name}
         <br />
-        {props.title} at <Link href={props.company.url}>{props.company.name}</Link>
+        {props.title} at{' '}
+        <Link href={props.company.url}>{props.company.name}</Link>
         <p>{props.location}</p>
       </div>
     </div>
     <div className={css.biographyRow}>{props.biography}</div>
     <div className={css.socialRow}>
-      <Link href={props.socialUrls.github}>Github</Link> • <Link href={props.socialUrls.linkedin}>LinkedIn</Link>
+      <Link href={props.socialUrls.github}>Github</Link> •{' '}
+      <Link href={props.socialUrls.linkedin}>LinkedIn</Link>
     </div>
     <div className={css.decorativeCircle} />
   </div>

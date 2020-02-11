@@ -5,7 +5,7 @@ import { allProjects } from './data';
 import * as css from './index.css';
 import { ProjectsList } from './List';
 
-export const Projects = () => (
+export const Projects: React.FunctionComponent = () => (
   <div className={css.container}>
     <ProjectsControlHeader />
     <ProjectsList projects={allProjects} />

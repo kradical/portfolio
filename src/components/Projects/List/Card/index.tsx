@@ -8,7 +8,9 @@ interface Props {
   project: Project;
 }
 
-export const ProjectsListCard: React.FunctionComponent<Props> = (props: Props) => (
+export const ProjectsListCard: React.FunctionComponent<Props> = (
+  props: Props,
+) => (
   <div className={css.container}>
     ProjectsListCard
     <br />

@@ -26,7 +26,9 @@ export class Header extends React.Component<{}, State> {
 
   private handleScroll = (): void => {
     const bannerHeight = parseInt(
-      window.getComputedStyle(document.querySelector('html')).getPropertyValue('--banner-height'),
+      window
+        .getComputedStyle(document.querySelector('html'))
+        .getPropertyValue('--banner-height'),
       10,
     );
 
@@ -36,7 +38,10 @@ export class Header extends React.Component<{}, State> {
   };
 
   public render(): React.ReactElement {
-    const classes = [css.header, this.state.shouldBeFixed ? css.fixed : css.stuck];
+    const classes = [
+      css.header,
+      this.state.shouldBeFixed ? css.fixed : css.stuck,
+    ];
 
     const className = classes.join(' ');
 
@@ -53,7 +58,10 @@ export class Header extends React.Component<{}, State> {
           </Link>
           <div>Search...</div>
         </div>
-        <ActionHeader message="Featured Project: Personal Blog" link="#todo-blog" />
+        <ActionHeader
+          message="Featured Project: Personal Blog"
+          link="#todo-blog"
+        />
       </React.Fragment>
     );
   }

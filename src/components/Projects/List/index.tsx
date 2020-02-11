@@ -9,7 +9,9 @@ interface Props {
   projects: Project[];
 }
 
-const renderCard = (project: Project): React.ReactElement => <ProjectsListCard project={project} />;
+const renderCard = (project: Project): React.ReactElement => (
+  <ProjectsListCard key={project.name} project={project} />
+);
 
 export const ProjectsList: React.FunctionComponent<Props> = (props: Props) => (
   <div className={css.container}>
