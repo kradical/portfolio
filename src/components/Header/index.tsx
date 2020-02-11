@@ -7,30 +7,36 @@ import { Link } from 'src/components/Link';
 
 import * as css from './index.css';
 
-interface IState {
+interface State {
   shouldBeFixed: boolean;
 }
 
-export class Header extends React.Component<{}, IState> {
-  public state: IState = {
+export class Header extends React.Component<{}, State> {
+  public state: State = {
     shouldBeFixed: true,
   };
 
-  public componentDidMount() {
+  public componentDidMount(): void {
     window.addEventListener('scroll', this.handleScroll);
   }
 
-  public componentWillUnmount() {
+  public componentWillUnmount(): void {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-  public render() {
-    const classes = [
-      css.header,
-      this.state.shouldBeFixed
-        ? css.fixed
-        : css.stuck,
-    ];
+  private handleScroll = (): void => {
+    const bannerHeight = parseInt(
+      window.getComputedStyle(document.querySelector('html')).getPropertyValue('--banner-height'),
+      10,
+    );
+
+    const shouldBeFixed = window.scrollY <= bannerHeight;
+
+    this.setState({ shouldBeFixed });
+  };
+
+  public render(): React.ReactElement {
+    const classes = [css.header, this.state.shouldBeFixed ? css.fixed : css.stuck];
 
     const className = classes.join(' ');
 
@@ -41,30 +47,14 @@ export class Header extends React.Component<{}, IState> {
           <Link classes={[css.profileLink]} href="#profile">
             <img src={profilePic} className={css.profilePicture} />
             Konrad Schultz
-           </Link>
+          </Link>
           <Link classes={[css.link]} href="#todo-blog">
             Blog
           </Link>
           <div>Search...</div>
         </div>
-        <ActionHeader
-          message="Featured Project: Personal Blog"
-          link="#todo-blog"
-        />
-       </React.Fragment>
+        <ActionHeader message="Featured Project: Personal Blog" link="#todo-blog" />
+      </React.Fragment>
     );
-  }
-
-  private handleScroll = () => {
-    const bannerHeight = parseInt(
-      window
-        .getComputedStyle(document.querySelector('html'))
-        .getPropertyValue('--banner-height'),
-      10,
-    );
-
-    const shouldBeFixed = window.scrollY <= bannerHeight;
-
-    this.setState({ shouldBeFixed });
   }
 }

@@ -1,20 +1,17 @@
 import * as React from 'react';
 
-import { IProject } from 'src/components/Projects/data';
+import { Project } from 'src/components/Projects/data';
 
 import * as css from './index.css';
 
-interface IProps {
-  project: IProject;
+interface Props {
+  project: Project;
 }
 
-export const ProjectsListCard = (props: IProps) =>
-  (
-    <div className={css.container}>
-      ProjectsListCard
-      <br />
-      {props.project.name}
-      {' '}
-      {props.project.liveUrl}
-    </div>
-  );
+export const ProjectsListCard: React.FunctionComponent<Props> = (props: Props) => (
+  <div className={css.container}>
+    ProjectsListCard
+    <br />
+    {props.project.name} {props.project.liveUrl}
+  </div>
+);

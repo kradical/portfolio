@@ -5,10 +5,9 @@ import { allProjects } from './data';
 import * as css from './index.css';
 import { ProjectsList } from './List';
 
-export const Projects = () =>
-  (
-    <div className={css.container}>
-      <ProjectsControlHeader />
-      <ProjectsList projects={allProjects}/>
-    </div>
-  );
+export const Projects = () => (
+  <div className={css.container}>
+    <ProjectsControlHeader />
+    <ProjectsList projects={allProjects} />
+  </div>
+);

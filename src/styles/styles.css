@@ -1,4 +1,4 @@
-:root {
+:global(:root) {
   --color-primary: #273E74;
   --color-primary-darker: #13295D;
   --color-primary-darkest: #061740;
@@ -40,6 +40,14 @@
   font-family: Karla, Verdana, sans-serif;
 }
 
-body {
+:global(body) {
   margin: 0;
+}
+
+/**
+ * This is a placeholder so that this file has at least one class
+ * And the loader doesn't crash.
+ */
+.placeholder {
+  display: none,
 }

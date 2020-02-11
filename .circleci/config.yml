@@ -11,19 +11,34 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
       - run: npm install
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-
       - persist_to_workspace:
           root: ~/repo
           paths:
             - '*'
+
+  lint:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+
+      - run: npm run lint
+
+  format:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+
+      - run: npm run format:check
 
   test:
     <<: *defaults
@@ -32,7 +47,6 @@ jobs:
           at: ~/repo
 
       - run: npm test
-      - run: npm run lint
 
   build:
     <<: *defaults
@@ -63,6 +77,12 @@ workflows:
   btd:
     jobs:
       - init
+      - lint:
+          requires:
+            - init
+      - format:
+          requires:
+            - init
       - test:
           requires:
             - init

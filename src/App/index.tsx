@@ -8,13 +8,12 @@ import { Projects } from 'src/components/Projects';
 
 import 'src/styles/styles.css';
 
-export const App = () =>
-  (
-    <React.Fragment>
-      <Header />
-      <Banner />
-      <Profile />
-      <Projects />
-      <Footer />
-     </React.Fragment>
-  );
+export const App = () => (
+  <React.Fragment>
+    <Header />
+    <Banner />
+    <Profile />
+    <Projects />
+    <Footer />
+  </React.Fragment>
+);

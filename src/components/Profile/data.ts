@@ -1,6 +1,6 @@
 import * as profilePic from 'assets/images/profilePicture.jpg';
 
-export interface IPersonProfile {
+export interface PersonProfile {
   avatarUrl: string;
   company: {
     name: string;
@@ -16,7 +16,7 @@ export interface IPersonProfile {
   title: string;
 }
 
-export const me: IPersonProfile = {
+export const me: PersonProfile = {
   avatarUrl: profilePic,
   biography: 'I like to code and things.',
   company: {
@@ -30,5 +30,4 @@ export const me: IPersonProfile = {
     linkedin: 'https://www.linkedin.com/in/konradschultz/',
   },
   title: 'Lead Software Developer',
-
 };
