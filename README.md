@@ -4,13 +4,12 @@ Personal portfolio site
 View this site live at http://konradschultz-portfolio.s3-website.ca-central-1.amazonaws.com/
 
 To get this project running:
-- install `nodejs` `v10.3.1` and `npm` `v6.1.0`
+- install `nodejs 12` and `npm 6` (current lts)
 - `$ npm install`
 - `$ npm start`
 - navigate to `localhost:9000` in your favourite browser
 
 ### Ideas
-- [ ] Add context to css module hashes
 - [ ] Header
   - [ ] Action Header
     - [ ] Add Icon

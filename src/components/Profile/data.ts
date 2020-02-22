@@ -1,22 +1,6 @@
 import * as profilePic from 'assets/images/profilePicture.jpg';
 
-export interface PersonProfile {
-  avatarUrl: string;
-  company: {
-    name: string;
-    url: string;
-  };
-  biography: string;
-  location: string;
-  name: string;
-  socialUrls: {
-    linkedin: string;
-    github: string;
-  };
-  title: string;
-}
-
-export const me: PersonProfile = {
+export const me = {
   avatarUrl: profilePic,
   biography: 'I like to code and things.',
   company: {

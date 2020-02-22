@@ -1,6 +1,6 @@
 declare namespace StylesCssModule {
   export interface IStylesCss {
-    test: string;
+    placeholder: string;
   }
 }
 

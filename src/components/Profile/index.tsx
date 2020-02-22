@@ -4,4 +4,4 @@ import { ProfileCard } from './Card';
 
 import { me } from './data';
 
-export const Profile = () => <ProfileCard {...me} />;
+export const Profile: React.FunctionComponent = () => <ProfileCard {...me} />;

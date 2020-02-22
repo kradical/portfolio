@@ -1,12 +1,30 @@
+import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
 import { Link } from 'src/components/Link';
-import { PersonProfile } from 'src/components/Profile/data';
 
 import { Avatar } from './Avatar';
 import * as css from './index.css';
 
-export const ProfileCard = (props: PersonProfile) => (
+const propTypes = {
+  avatarUrl: PropTypes.string.isRequired,
+  company: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+  }).isRequired,
+  biography: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  socialUrls: PropTypes.shape({
+    linkedin: PropTypes.string.isRequired,
+    github: PropTypes.string.isRequired,
+  }).isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+type Props = PropTypes.InferProps<typeof propTypes>;
+
+export const ProfileCard: React.FunctionComponent<Props> = props => (
   <div id="profile" className={css.card}>
     <div className={css.infoRow}>
       <div className={css.avatar}>
@@ -28,3 +46,5 @@ export const ProfileCard = (props: PersonProfile) => (
     <div className={css.decorativeCircle} />
   </div>
 );
+
+ProfileCard.propTypes = propTypes;

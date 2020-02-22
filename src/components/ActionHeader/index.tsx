@@ -5,11 +5,13 @@ import { Link } from 'src/components/Link';
 
 import * as css from './index.css';
 
-interface Props {
-  message: string;
-  link: string;
-  classes?: string[];
-}
+const propTypes = {
+  message: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  classes: PropTypes.arrayOf(PropTypes.string),
+};
+
+type Props = PropTypes.InferProps<typeof propTypes>;
 
 const ActionHeader: React.StatelessComponent<Props> = props => {
   const { link, message } = props;
@@ -25,11 +27,7 @@ const ActionHeader: React.StatelessComponent<Props> = props => {
   );
 };
 
-ActionHeader.propTypes = {
-  message: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
-  classes: PropTypes.arrayOf(PropTypes.string),
-};
+ActionHeader.propTypes = propTypes;
 
 ActionHeader.defaultProps = {
   classes: [],

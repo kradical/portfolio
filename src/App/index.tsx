@@ -8,7 +8,7 @@ import { Projects } from 'src/components/Projects';
 
 import 'src/styles/styles.css';
 
-export const App = () => (
+export const App: React.FunctionComponent = () => (
   <React.Fragment>
     <Header />
     <Banner />
