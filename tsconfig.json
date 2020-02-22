@@ -1,17 +1,23 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "esModuleInterop": true,
     "jsx": "react",
     "module": "commonjs",
+    "moduleResolution": "node",
     "noImplicitAny": true,
-    "outDir": "./dist",
+    "outDir": "dist",
     "sourceMap": true,
-    "target": "es5"
+    "target": "es6",
+    "strict": true,
+
+    // Additional checks
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "./src/**/*.ts",
-    "./src/**/*.tsx",
-    "./src/**/*.d.ts"
-  ],
+  "include": ["./src/**/*.ts", "./src/**/*.tsx", "./src/**/*.d.ts"],
   "exclude": ["node_modules"]
 }

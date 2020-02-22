@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import * as profilePic from 'assets/images/profilePicture.jpg';
+import profilePic from 'assets/images/profilePicture.jpg';
 
 import { ActionHeader } from 'src/components/ActionHeader';
 import { Link } from 'src/components/Link';
@@ -25,12 +25,17 @@ export class Header extends React.Component<{}, State> {
   }
 
   private handleScroll = (): void => {
-    const bannerHeight = parseInt(
-      window
-        .getComputedStyle(document.querySelector('html'))
-        .getPropertyValue('--banner-height'),
-      10,
-    );
+    const html = document.querySelector('html');
+
+    if (!html) {
+      return;
+    }
+
+    const bannerHeightProperty = window
+      .getComputedStyle(html)
+      .getPropertyValue('--banner-height');
+
+    const bannerHeight = parseInt(bannerHeightProperty, 10);
 
     const shouldBeFixed = window.scrollY <= bannerHeight;
 

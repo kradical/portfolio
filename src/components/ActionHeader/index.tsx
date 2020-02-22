@@ -8,15 +8,20 @@ import * as css from './index.css';
 const propTypes = {
   message: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  classes: PropTypes.arrayOf(PropTypes.string),
+  classes: PropTypes.arrayOf(PropTypes.string.isRequired),
 };
 
 type Props = PropTypes.InferProps<typeof propTypes>;
 
-const ActionHeader: React.StatelessComponent<Props> = props => {
-  const { link, message } = props;
+const defaultProps: Partial<Props> = {
+  classes: [],
+};
 
-  const className = [...props.classes, css.action].filter(Boolean).join(' ');
+const ActionHeader: React.StatelessComponent<Props> = props => {
+  const { classes, link, message } = props;
+
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  const className = [...classes!, css.action].filter(Boolean).join(' ');
 
   const linkClasses = [css.actionLink];
 
@@ -28,9 +33,6 @@ const ActionHeader: React.StatelessComponent<Props> = props => {
 };
 
 ActionHeader.propTypes = propTypes;
-
-ActionHeader.defaultProps = {
-  classes: [],
-};
+ActionHeader.defaultProps = defaultProps;
 
 export { ActionHeader };

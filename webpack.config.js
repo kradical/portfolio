@@ -13,7 +13,6 @@ module.exports = {
     filename: 'bundle.js',
     path: path.join(__dirname, 'dist'),
   },
-  devtool: 'source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     port: 9000,
@@ -24,6 +23,11 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/,
+      },
       {
         test: /\.css$/i,
         use: [
@@ -45,11 +49,6 @@ module.exports = {
       {
         test: /\.(png|jpg)$/,
         loader: 'url-loader',
-      },
-      {
-        test: /\.tsx?$/,
-        loader: 'ts-loader',
-        exclude: /node_modules/,
       },
     ],
   },

@@ -4,18 +4,24 @@ import * as React from 'react';
 import * as css from 'src/components/Link/index.css';
 
 const propTypes = {
-  classes: PropTypes.arrayOf(PropTypes.string),
+  classes: PropTypes.arrayOf(PropTypes.string.isRequired),
+  children: PropTypes.node,
   href: PropTypes.string.isRequired,
 };
 
 type Props = PropTypes.InferProps<typeof propTypes>;
 
 const Link: React.StatelessComponent<Props> = props => {
-  const { classes, href } = props;
+  const { children, classes, href } = props;
 
-  const className = [...classes, css.link].filter(Boolean).join(' ');
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  const className = [...classes!, css.link].filter(Boolean).join(' ');
 
-  return <a className={className} href={href} />;
+  return (
+    <a className={className} href={href}>
+      {children}
+    </a>
+  );
 };
 
 Link.propTypes = propTypes;
